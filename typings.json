@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "jasmine": "registry:dt/jasmine#2.5.0+20170117213604",
+    "jquery": "registry:dt/jquery#1.10.0+20170123093700"
+  }
+}

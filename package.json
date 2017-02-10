@@ -1,0 +1,56 @@
+{
+  "name": "accessible-carousel",
+  "version": "1.0.0",
+  "description": "Simple Javascript Carousel with ADA support",
+  "main": "index.js",
+  "scripts": {
+    "build:ts": "tsc --watch",
+    "build:bundle": "webpack --watch",
+    "build:templates": "pug app/index.pug --out _public --watch",
+    "build:sass": "node-sass app/scss/main.scss _public/css/main.css --source-map true",
+    "build:sass:watch": "node-sass app/scss/main.scss _public/css/main.css --source-map true --watch",
+    "build": "npm run build:ts && npm run build:templates && npm run build:sass",
+    "serve": "lite-server",
+    "start": "concurrently \"npm run build:ts\" \"npm run build:bundle\" \"npm run build:templates\" \"npm run build:sass\" \"npm run build:sass:watch\" \"npm run serve\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "./_d/_all.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giulianok/accessible-carousel.git"
+  },
+  "author": "Giuliano Kranevitter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giulianok/accessible-carousel/issues"
+  },
+  "homepage": "https://github.com/giulianok/accessible-carousel#readme",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sinon": "^1.0.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.2",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.0",
+    "pug": "^2.0.0-beta11",
+    "typescript": "^2.1.5",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1",
+    "jasmine": "^2.5.3",
+    "istanbul-instrumenter-loader": "^1.2.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

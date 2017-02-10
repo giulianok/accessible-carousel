@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.idea
+_public
+node_modules
+typings
+
+app/*.js*
+app/components/**/*.js*
+test/**/*.js*

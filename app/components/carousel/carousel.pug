@@ -1,0 +1,15 @@
+-var $prefix = 'carousel-'
+
++bemto_scope({prefix: $prefix})
+    +b.component(carousel-component)
+        +e.A.arrow._left(href="#", carousel-prev)
+
+        +b.slides(carousel-slides)
+            +e.UL.list(carousel-list)
+                each slide in [1,2,3,4,5]
+                    +e.LI.item(carousel-item)
+                        -var $number = slide
+                        include ../deal/deal
+
+
+        +e.A.arrow._right(href="#", carousel-next)

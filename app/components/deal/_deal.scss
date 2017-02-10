@@ -1,0 +1,15 @@
+@include prefix('deal') {
+
+	@include block('component') {
+		display: flex;
+		width: 300px;
+		height: 200px;
+		align-items: center;
+		justify-content: center;
+		background-color: gray;
+		text-decoration: none;
+		color: white;
+		font-size: 2em;
+	}
+
+}

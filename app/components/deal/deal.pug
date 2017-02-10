@@ -1,0 +1,7 @@
+-var $prefix = 'deal-'
+
+if !$number
+    -var $number = 'x'
+
++bemto_scope({prefix: $prefix})
+    +b.A.component(href="#") #{$number}

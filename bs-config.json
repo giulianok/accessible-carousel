@@ -1,0 +1,13 @@
+{
+  "injectChanges": false,
+  "files": [
+    "./src/**/*.{pug,scss,ts}"
+  ],
+  "watchOptions": {
+    "ignored": "node_modules"
+  },
+  "server": {
+    "baseDir": "./_public"
+  },
+  "open": false
+}

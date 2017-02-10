@@ -1,0 +1,47 @@
+@include prefix('carousel') {
+	$deal-width: 300px;
+	$space: 10px;
+	$slides-per-view: 3;
+	$total-slides: 5;
+
+	@include block('component') {
+		position: relative;
+		float: left;
+		margin: 50px;
+		
+		@include element('arrow') {
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 30px;
+			top: 50%;
+			background-color: red;
+
+			@include modifier('left') {
+				left: -40px;
+			}
+
+			@include modifier('right') {
+				right: -40px;
+			}
+		}
+		
+	}
+
+	@include block('slides') {
+		float: left;
+		width: ($deal-width + $space * 2) * $slides-per-view;
+		overflow: hidden;
+
+		@include element('list') {
+			float: left;
+			width: ($deal-width + $space * 2) * $total-slides;
+		}
+
+		@include element('item') {
+			float: left;
+			padding: $space;
+		}
+	}
+
+}
